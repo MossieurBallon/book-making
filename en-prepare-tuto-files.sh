@@ -7,23 +7,24 @@
 #~ Author Pierrick LE BRUN (alias Môssieur Ballon)
 #~ Licensed under GNU GPL version 3.0 
 
-tutosdir="../step-by-step-tutorials"
-tutosdir4sed="\.\.\/step-by-step-tutorials"
-tutosdiritems=$(ls $tutosdir)
+. ./var
+
+mkdir -p $workdir
 
 for i in $tutosdiritems ; do
 	if [ -d $tutosdir/$i ] ; then
 		if [ "$i" = "css" ] ; then
-	 		cp -r $tutosdir/$i . ;
+	 		cp -r $tutosdir/$i $workdir ;
 	 	elif [ "$i" = "global-images" ] ; then
-	 		cp -r $tutosdir/$i . ;
+	 		cp -r $tutosdir/$i $workdir ;
 		else
 			for ii in $tutosdir/$i/* ; do
-				if [ -f $ii ] ; then
-					[[ -d $i ]] || mkdir $i
-					cp $ii $i/ ;
+				if [[ $ii == *-en* ]] ; then
+					[[ -d $i ]] || mkdir -p $workdir/$i ;
+					cp $ii $workdir/$i/ ;
 				fi
 			done
+			cd $workdir
 			for iii in $(ls $i | grep "html"); do
 				sed -i "s/\"images/\"$tutosdir4sed\/$i\/images/g" "$i/$iii" ;
 				sed -i 's/<h1.*<\/h1>//' $i/$iii ; 

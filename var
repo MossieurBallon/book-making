@@ -1,0 +1,8 @@
+tutosdir="../step-by-step-tutorials"
+tutosdir4sed="\.\.\/step-by-step-tutorials"
+tutosdiritems=$(ls $tutosdir)
+workdir="../BalloonBook"
+
+enbook=en-balloon-twisting-from-scratch.html
+
+

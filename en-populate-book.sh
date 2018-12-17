@@ -7,13 +7,14 @@
 #~ Author Pierrick LE BRUN (alias Môssieur Ballon)
 #~ Licensed under GNU GPL version 3.0 
 
-enbook=en-balloon-twisting-from-scratch.html
-cp en-book-base.html $enbook
+. ./var
+
+cp en-book-base.html $workdir/$enbook
+cd $workdir/
 export LC_ALL=C
-timestamp=$(date)
-sed -i "s/Last update:/Updated on: $timestamp/g" "$enbook"
+sed -i "s/Last update:/Updated on: $(date)/g" "$enbook"
 unset LC_ALL
-cd dog/
+cd $workdir/dog/
 sed -i -e '/dog<\/h2>/r dog-en.html' ../$enbook
 cd ../sword/
 sed -i -e '/sword<\/h2>/r sword-en.html' ../$enbook
