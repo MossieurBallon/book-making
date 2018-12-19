@@ -9,7 +9,7 @@
 
 . ./var
 
-cp en-book-base.html $workdir/$enbook
+cp $enbase $workdir/$enbook
 cd $workdir/
 export LC_ALL=C
 sed -i "s/Last update:/Updated on: $(date)/g" "$enbook"

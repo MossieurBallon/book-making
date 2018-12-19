@@ -1,8 +1,14 @@
+workdir="../BalloonBooks"
+
 tutosdir="../step-by-step-tutorials"
-tutosdir4sed="\.\.\/step-by-step-tutorials"
 tutosdiritems=$(ls $tutosdir)
-workdir="../BalloonBook"
+tutosdir4sed="\.\.\/step-by-step-tutorials"
+
+enbase=en-book-base.html
+frbase=fr-book-base.html
+esbase=es-book-base.html
 
 enbook=en-balloon-twisting-from-scratch.html
-
+frbook=fr-balloon-twisting-from-scratch.html
+esbook=es-balloon-twisting-from-scratch.html
 
