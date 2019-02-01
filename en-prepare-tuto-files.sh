@@ -9,13 +9,16 @@
 
 . ./var
 
-mkdir -p $workdir
+mkdir -p $workdir/$globalpixdir
+cp $pixdir/* $workdir/$globalpixdir
 
 for i in $tutosdiritems ; do
 	if [ -d $tutosdir/$i ] ; then
 		if [ "$i" = "css" ] ; then
 	 		cp -r $tutosdir/$i $workdir ;
-	 	elif [ "$i" = "global-images" ] ; then
+	 		sed -i 's/#lastpix/.lastpix/' $workdir/$i/* ; 
+	 		
+	 	elif [ "$i" = "$globalpixdir" ] ; then
 	 		cp -r $tutosdir/$i $workdir ;
 		else
 			for ii in $tutosdir/$i/* ; do
@@ -26,18 +29,22 @@ for i in $tutosdiritems ; do
 			done
 			cd $workdir
 			for iii in $(ls $i | grep "html"); do
+				sed -i 's/id="lastpix/class="lastpix/' $i/$iii ; 
 				sed -i "s/\"images/\"$tutosdir4sed\/$i\/images/g" "$i/$iii" ;
 				sed -i 's/<h1.*<\/h1>//' $i/$iii ; 
 				sed -i '/<aside>/,/<\/aside>/d' $i/$iii ; 
 				sed -i '/mr-ballon-logo/d' $i/$iii ; 
 				sed -i 's/<div class="pagebreak/\t<div class="pagebreak/' $i/$iii ; 				
-				sed -i 's/<strong>.*ee you soon.*Môssieur Ballon.*<\/strong>/<strong>And this is the end of our lesson!<\/strong>/' $i/$iii ; 
+				sed -i 's/<strong>.*ee you soon.*Môssieur Ballon.*<\/strong>/<strong>And that was the end of this lesson!<\/strong>/' $i/$iii ; 
 				sed -i '/<!DOCTYPE html>/,/<header>/d' $i/$iii ; 
 				sed -i '/header>/d' $i/$iii ;		
 				sed -i '/main>/d' $i/$iii ;	
 				sed -i '/<\/body>/,/<\/html>/d' $i/$iii ; 
 				sed -i '/^\s*$/d' $i/$iii ; 
-				sed -i 's/^/\t\t/' $i/$iii ; 
+				vid=$(echo ${i}vid | tr '-' '_')
+				sed -i '/This photo tutorial is.*which you can also find.*$/a\\t\t\<p><a href="insert-vid-url" target="_blank"><img src="global-images/youtube-logo.png" width="42"> <strong>Watch this video tutorial on YouTube</strong></a></p>' $i/$iii ;
+				sed -i "s/\insert-vid-url/${!vid}/g" "$i/$iii" ;
+				sed -i 's/^/\t\t/' $i/$iii ;
 				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-6-skill-1-knots/#an1/' $i/$iii ; 
 				sed -i 's/video <a href="#an1/ <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-6-skill-1-knots/' $i/$iii ;
 				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-7-skill-2-bubbles/#an2/' $i/$iii ; 

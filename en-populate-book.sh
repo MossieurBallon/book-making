@@ -12,7 +12,7 @@
 cp $enbase $workdir/$enbook
 cd $workdir/
 export LC_ALL=C
-sed -i "s/Last update:/Updated on: $(date)/g" "$enbook"
+sed -i "s/Last update:/Last update: $(date)/g" "$enbook"
 unset LC_ALL
 cd $workdir/dog/
 sed -i -e '/dog<\/h2>/r dog-en.html' ../$enbook

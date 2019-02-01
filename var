@@ -1,14 +1,56 @@
 workdir="../BalloonBooks"
+pixdir="pix"
+globalpixdir="global-images"
 
 tutosdir="../step-by-step-tutorials"
 tutosdiritems=$(ls $tutosdir)
 tutosdir4sed="\.\.\/step-by-step-tutorials"
 
-enbase=en-book-base.html
-frbase=fr-book-base.html
-esbase=es-book-base.html
+enbase="en-book-base.html"
+frbase="fr-book-base.html"
+esbase="es-book-base.html"
 
-enbook=en-balloon-twisting-from-scratch.html
-frbook=fr-balloon-twisting-from-scratch.html
-esbook=es-balloon-twisting-from-scratch.html
+enbook="en-balloon-twisting-from-scratch.html"
+frbook="fr-balloon-twisting-from-scratch.html"
+esbook="es-balloon-twisting-from-scratch.html"
+
+dogvid="https:\/\/www\.youtube\.com\/watch\?v=FWgQJqH8R1M"
+
+swordvid="https:\/\/www\.youtube\.com\/watch\?v=TRz1xcH4dxM"
+
+tigervid="https:\/\/www\.youtube\.com\/watch\?v=-DwXh4CbWpo"
+
+frogvid="https:\/\/www\.youtube\.com\/watch\?v=MXVcifu_oZg" 
+
+tuxvid="https:\/\/www\.youtube\.com\/watch\?v=S5AlYk5oIyU" 
+
+knotvid="https:\/\/www\.youtube\.com\/watch\?v=w69FnvzJEkg" 
+
+bubblevid="https:\/\/www\.youtube\.com\/watch\?v=S1Tr5gb6snk" 
+
+curvevid="https:\/\/www\.youtube\.com\/watch\?v=ZifgAfvua8s" 
+
+anglevid="https:\/\/www\.youtube\.com\/watch\?v=ut5gA_4ILJI"
+
+pinch_twistvid="https:\/\/www\.youtube\.com\/watch\?v=XYcS6xh3Tg4" 
+
+air_controlvid="https:\/\/www\.youtube\.com\/watch\?v=reuYnohIimk" 
+
+loopvid="https:\/\/www\.youtube\.com\/watch\?v=w3LF_x_OX8M" 
+
+tulip_twistvid="https:\/\/www\.youtube\.com\/watch\?v=dFIE074EgFI" 
+
+flowervid="https:\/\/www\.youtube\.com\/watch\?v=xiYkPnU72C4" 
+
+giraffevid="https:\/\/www\.youtube\.com\/watch\?v=Ul_s8N69St4" 
+
+heartvid="https:\/\/www\.youtube\.com\/watch\?v=N-5hnfhu4NI" 
+
+ladybugvid="https:\/\/www\.youtube\.com\/watch\?v=ZrMgPJDYNHw" 
+
+butterflyvid="https:\/\/www\.youtube\.com\/watch\?v=IqYM6g2dCS8" 
+
+snakevid="https:\/\/www\.youtube\.com\/watch\?v=mNhtmZCz5aw" 
+
+fishvid="https:\/\/www\.youtube\.com\/watch\?v=tjTtV4ntJFI" 
 
