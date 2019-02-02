@@ -17,7 +17,10 @@ for i in $tutosdiritems ; do
 		if [ "$i" = "css" ] ; then
 	 		cp -r $tutosdir/$i $workdir ;
 	 		sed -i 's/#lastpix/.lastpix/' $workdir/$i/* ; 
-	 		
+	 		sed -ni '/header{/{p;:a;N;/margin: 0 auto;/!ba;s/.*\n/\twidth: 100%;\n/};p' $workdir/$i/* ; 
+	 		sed -ni '/\twidth: 100%;/{p;:a;N;/}/!ba;s/.*\n/\tmargin: 0;\n/};p' $workdir/$i/* ; 
+	 		sed -i '/@media print{/i @page :first {\n\twidth: 100%;\n\tmargin: 0;\n}\n' $workdir/$i/* ;
+			sed -i '/width: 90%;/a \\t\tfloat: left;' $workdir/$i/* ; 
 	 	elif [ "$i" = "$globalpixdir" ] ; then
 	 		cp -r $tutosdir/$i $workdir ;
 		else
