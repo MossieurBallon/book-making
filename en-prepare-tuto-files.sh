@@ -37,17 +37,30 @@ for i in $tutosdiritems ; do
 				sed -i 's/<h1.*<\/h1>//' $i/$iii ; 
 				sed -i '/<aside>/,/<\/aside>/d' $i/$iii ; 
 				sed -i '/mr-ballon-logo/d' $i/$iii ; 
-				sed -i 's/<div class="pagebreak/\t<div class="pagebreak/' $i/$iii ; 				
-				sed -i 's/<strong>.*ee you soon.*Môssieur Ballon.*<\/strong>/<strong>And that was the end of this lesson!<\/strong>/' $i/$iii ; 
+				sed -i 's/<div class="pagebreak/\t<div class="pagebreak/' $i/$iii ; 
+				sed -i "s/^.*hat's all there is to it!/<strong>And... that's all there is to it!<\/strong>/" $i/$iii ;
+				sed -i "s/^.*as simple as that!/<strong>And... that's all there is to it!<\/strong>/" $i/$iii ;
+				sed -i "s/^.*nd there!/<strong>And... that's all there is to it!<\/strong>/" $i/$iii ;
+				sed -i "s/^.*here you go!/<strong>And... that's all there is to it!<\/strong>/" $i/$iii ; 
+				sed -i "s/^.*here you go, now it's your turn!/<strong>And... that's all there is to it!<\/strong>/" $i/$iii ;  
+				sed -i "s/^.*nd that's it for today./<strong>And... that's all there is to it!<\/strong>/" $i/$iii 
+				sed -i "s/<strong>.*ee you soon.*Môssieur Ballon.*<\/strong>/<strong><br>And... that's all there is to it!<\/strong>/" $i/$iii ; 
+				sed -i "s/but also in many models we'll learn to make later, namely for making/and the tutorial on/" $i/$iii ; 
+				sed -i "s/We will be using this skill quite soon, in an upcoming tutorial:/This skill is used in the tutorial on/" $i/$iii ; 
 				sed -i '/<!DOCTYPE html>/,/<header>/d' $i/$iii ; 
 				sed -i '/header>/d' $i/$iii ;		
 				sed -i '/main>/d' $i/$iii ;	
 				sed -i '/<\/body>/,/<\/html>/d' $i/$iii ; 
 				sed -i '/^\s*$/d' $i/$iii ; 
 				vid=$(echo ${i}vid | tr '-' '_')
-				sed -i '/This photo tutorial is.*which you can also find.*$/a\\t\t\<p><a href="insert-vid-url" target="_blank"><img src="global-images/youtube-logo.png" width="42"> <strong>Watch this video tutorial on YouTube</strong></a></p>' $i/$iii ;
+				sed -i '/This photo tutorial is.*which you can also find.*$/a\\t\t\<p><a href="insert-vid-url" target="_blank"><img id="ytlogo" src="global-images/youtube-logo.png" width="32"> <strong>You can watch the video version of this tutorial on YouTube</strong></a></p><br>' $i/$iii ;
 				sed -i "s/\insert-vid-url/${!vid}/g" "$i/$iii" ;
 				sed -i 's/^/\t\t/' $i/$iii ;
+				sed -i 's/Fairly easy<\/dd>/Fairly easy<\/dd><br>/' $i/$iii ;
+				sed -i 's/This photo tutorial is a complementary resource for the video/This tutorial was originally published as/' $i/$iii ;
+				sed -i 's/This photo tutorial is a companion piece to the video tutorial/This tutorial was originally published as/' $i/$iii ;
+				sed -i 's/This photo tutorial is a companion piece to the video/This tutorial was originally published as/' $i/$iii ;
+				sed -i 's/which you can also find on.*$//' $i/$iii ;
 				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-6-skill-1-knots/#an1/' $i/$iii ; 
 				sed -i 's/video <a href="#an1/ <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-6-skill-1-knots/' $i/$iii ;
 				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-7-skill-2-bubbles/#an2/' $i/$iii ; 

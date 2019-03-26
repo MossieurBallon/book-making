@@ -54,3 +54,4 @@ cd ../tulip-twist/
 sed -i -e '/tulip-twist<\/h3>/r tulip-twist-en.html' ../$enbook
 cd ../air-control/
 sed -i -e '/air pressure<\/h3>/r air-control-en.html' ../$enbook
+sed -i 's/<br><br>//' ../$enbook
