@@ -59,24 +59,44 @@ for i in $tutosdiritems ; do
 				sed -i 's/Fairly easy<\/dd>/Fairly easy<\/dd><br>/' $i/$iii ;
 				sed -i 's/This photo tutorial is a complementary resource for the video/This tutorial was originally published as/' $i/$iii ;
 				sed -i 's/This photo tutorial is a companion piece to the video tutorial/This tutorial was originally published as/' $i/$iii ;
-				sed -i 's/This photo tutorial is a companion piece to the video/This tutorial was originally published as/' $i/$iii ;
+				sed -i 's/This photo tutorial is a companion piece.*the video/This tutorial was originally published as/' $i/$iii ;
 				sed -i 's/which you can also find on.*$//' $i/$iii ;
 				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-6-skill-1-knots/#an1/' $i/$iii ; 
-				sed -i 's/video <a href="#an1/ <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-6-skill-1-knots/' $i/$iii ;
+				sed -i 's/originally published as <a href="#an1/originally published as <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-6-skill-1-knots/' $i/$iii ;
 				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-7-skill-2-bubbles/#an2/' $i/$iii ; 
-				sed -i 's/video <a href="#an2/ <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-7-skill-2-bubbles/' $i/$iii ;
+				sed -i 's/originally published as <a href="#an2/originally published as <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-7-skill-2-bubbles/' $i/$iii ;
 				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-8-skill-3-how-to-curve-a-balloon/#an3/' $i/$iii ; 
-				sed -i 's/video <a href="#an3/ <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-8-skill-3-how-to-curve-a-balloon/' $i/$iii ;
+				sed -i 's/originally published as <a href="#an3/originally published as <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-8-skill-3-how-to-curve-a-balloon/' $i/$iii ;
 				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-9-skill-4-make-angles-with-balloons/#an4/' $i/$iii ; 
-				sed -i 's/video <a href="#an4/ <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-9-skill-4-make-angles-with-balloons/' $i/$iii ;
+				sed -i 's/originally published as <a href="#an4/originally published as <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-9-skill-4-make-angles-with-balloons/' $i/$iii ;
 				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-10-skill-5-pinch-twists/#an5/' $i/$iii ; 
-				sed -i 's/video <a href="#an5/ <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-10-skill-5-pinch-twists/' $i/$iii ;
+				sed -i 's/originally published as <a href="#an5/originally published as <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-10-skill-5-pinch-twists/' $i/$iii ;
 				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-11-skill-6-air-pressure-control/#an6/' $i/$iii ; 
-				sed -i 's/video <a href="#an6/ <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-11-skill-6-air-pressure-control/' $i/$iii ;
+				sed -i 's/originally published as <a href="#an6/originally published as <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-11-skill-6-air-pressure-control/' $i/$iii ;
 				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-12-skill-7-the-loop/#an7/' $i/$iii ; 
-				sed -i 's/video <a href="#an7/ <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-12-skill-7-the-loop/' $i/$iii ;								
+				sed -i 's/originally published as <a href="#an7/originally published as <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-12-skill-7-the-loop/' $i/$iii ;	
 				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-13-skill-8-tulip-twist/#an8/' $i/$iii ; 
-				sed -i 's/video <a href="#an8/ <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-13-skill-8-tulip-twist/' $i/$iii ;				
+				sed -i 's/originally published as <a href="#an8/originally published as <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-13-skill-8-tulip-twist/' $i/$iii ;								
+				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-1-the-doggy/#ch2/' $i/$iii ; 
+				sed -i 's/originally published as <a href="#ch2/originally published as <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-1-the-doggy/' $i/$iii ;	
+				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-2-the-sword/#ch3/' $i/$iii ; 
+				sed -i 's/originally published as <a href="#ch3/originally published as <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-2-the-sword/' $i/$iii ;								
+				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-3-the-frog/#ch6/' $i/$iii ; 
+				sed -i 's/originally published as <a href="#ch6/originally published as <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-3-the-frog/' $i/$iii ;					
+				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-4-the-tiger/#ch5/' $i/$iii ; 
+				sed -i 's/originally published as <a href="#ch5/originally published as <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-4-the-tiger/' $i/$iii ;				
+				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-14-the-flower/#ch11/' $i/$iii ; 
+				sed -i 's/originally published as <a href="#ch11/originally published as <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-14-the-flower/' $i/$iii ;					
+				
+				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-15-the-giraffe/#ch7/' $i/$iii ; 
+				sed -i 's/originally published as <a href="#ch7/originally published as <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-15-the-giraffe/' $i/$iii ;					
+
+				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-16-the-love-heart/#ch4/' $i/$iii ; 
+				sed -i 's/originally published as <a href="#ch4/originally published as <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-16-the-love-heart/' $i/$iii ;		
+
+				sed -i 's/https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-5-tux-the-penguin/#ch9/' $i/$iii ; 
+				sed -i 's/originally published as <a href="#ch9/originally published as <a href="https:\/\/www.mossieur-ballon.com\/tutorials\/balloon-twisting-from-scratch-5-tux-the-penguin/' $i/$iii ;		
+
 			done
 		fi
     fi
